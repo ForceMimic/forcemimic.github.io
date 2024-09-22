@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="ForceMimic" />
+    <meta
+      name="keywords"
+      content="ForceMimic, ForceCapture, HybridIL, Robotics, Robot Learning, Imitation Learning, Hybrid Force-Position Control, Vegetable Peeling"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ForceMimic</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PMWMSYT7XX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-PMWMSYT7XX');
+    </script>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css" />
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <link rel="stylesheet" href="./static/css/index.css" />
+    <link rel="icon" href="./static/images/favicon.png" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+  </head>
+
+  <body>
+    <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-start" style="flex-grow: 1; justify-content: center">
+          <a class="navbar-item" href="https://forcemimic.github.io/">
+            <span class="icon">
+              <i class="fas fa-home"></i>
+            </span>
+          </a>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link"> Related Work </a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="https://xxx"> xxx </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav> -->
+
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">
+                <span class="highlight">🦾 ForceMimic</span>
+              </h1>
+              <h1 class="title is-2 publication-title">
+                <span>Force-Centric Imitation Learning with Force-Motion Capture System for Contact-Rich Manipulation</span>
+              </h1>
+
+              <!-- <h4 class="title is-4 conference"><a href="https://2025.ieee-icra.org/" class="conference">IEEE International Conference on Robotics and Automation (<span class="grad_text">ICRA</span>) 2025</a></h4> -->
+
+              <!-- <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <a href="mailto:sjtu-wenhai@sjtu.edu.cn">Wenhai Liu</a
+                  ><sup>*</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://dadadadawjb.github.io/">Junbo Wang</a
+                  ><sup>*</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="mailto:sommerfeld@sjtu.edu.cn">Yiming Wang</a
+                  ><sup>*</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="mailto:wangweiming@sjtu.edu.cn">Weiming Wang</a
+                  ><sup></sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://www.mvig.org/">Cewu Lu</a
+                    ><sup>&dagger;</sup>,
+                </span>
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">Shanghai Jiao Tong University</span>
+              </div>
+
+              <div class="is-size-6 publication-authors">
+                (<sup>*</sup
+                ><span class="author-block"> Equal Contribution</span
+                >, <sup>&dagger;</sup
+                ><span class="author-block"> Corresponding Author</span>)
+              </div> -->
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block">
+                    <a
+                      href=""
+                      class="external-link button is-normal is-rounded is-orange"
+                    >
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a
+                      href=""
+                      class="external-link button is-normal is-rounded is-orange"
+                    >
+                      <span class="icon">
+                        <i class="fab fa-youtube"></i>
+                      </span>
+                      <span>Video</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a
+                    href=""
+                    class="external-link button is-normal is-rounded is-orange"
+                    >
+                    <span class="icon">
+                      <i class="fa fa-wrench"></i>
+                    </span>
+                    <span>Hardware (coming soon)</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a
+                    href=""
+                    class="external-link button is-normal is-rounded is-orange"
+                  >
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (coming soon)</span>
+                  </a>
+                </span>
+                </div>
+              </div>
+
+              <img
+                src="./static/images/teaser.png"
+                alt="Teaser"
+                style="width: 100%">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                In most contact-rich manipulation tasks,
+                humans apply time-varying forces to the target object,
+                compensating for inaccuracies in the vision-guided hand trajectory.
+                However, current robot learning algorithms primarily focus on trajectory-based policy,
+                with limited attention given to learning force-related skills.
+                To address this limitation, we introduce <b class="highlight">ForceMimic</b>,
+                a force-centric robot learning system, providing a natural,
+                force-aware and robot-free robotic demonstration collection system,
+                along with a hybrid force-motion imitation learning algorithm for robust contact-rich manipulation.
+                Using the proposed <b class="highlight">ForceCapture</b> system,
+                an operator can peel a zucchini in 5 minutes,
+                while force-feedback teleoperation takes over 13 minutes and struggles with task completion.
+                With the collected data, we propose <b class="highlight">HybridIL</b> to train a force-centric imitation learning model,
+                equipped with hybrid force-position control primitive to fit the predicted wrench-position parameters during robot execution.
+                Experiments demonstrate that our approach enables the model to learn a more robust policy under the contact-rich task of vegetable peeling,
+                increasing the success rates by 54.5% relatively compared to state-of-the-art pure-vision-based imitation learning.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Video</h2>
+            <div class="publication-video">
+              <iframe
+                src=""
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3 highlight">ForceCapture</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <div class="column content has-text-justified">
+              <ul>
+                <li><b>Objectives</b></li>
+                <ul>
+                  <li>Scalability</li>
+                  <li>On-site force realism</li>
+                  <li>Ergonomic comfort</li>
+                </ul>
+                <li><b>Mechanisms</b></li>
+                <ul>
+                  <li>Ratchet locking</li>
+                  <li>Gravity compensation</li>
+                </ul>
+              </ul>
+              <br />
+
+              <p>
+                Two versions of ForceCapture are designed,
+                one with a fixed tool and the other with an adaptive gripper.
+                At its core, both designs share the feature of a six-axis force sensor placed between the end-effector and the user's gripping handle,
+                which can be used to capture the effector-environment interaction forces.
+              </p>
+              <p>
+                ForceCapture is quite straightforward to manufacture,
+                with the main body fully produced using 3D printing.
+                The total cost of the printed parts and encoder is approximately $50.
+                The weight of the device equipped with the gripper is only 0.8kg,
+                of which the force sensor weighs 0.5kg, and our accessories weigh only 0.3kg,
+                which is even lighter than a can of cola.
+                And its center of mass is positioned above the handle,
+                conforms to the natural force application habits of the human hand.
+              </p>
+              <p>
+                Except for the effector-environment interaction forces,
+                forces exerted by human hands during opening and closing,
+                and the gravity of the effector are also captured.
+                A ratchet is inserted to isolate human hand forces by unidirectional locking if closed,
+                and least-squares estimation of the effector's center of mass and weight is used to compensate for the self-gravity before collecting data.
+              </p>
+            </div>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="content">
+              <img
+                src="./static/images/hardware.png"
+                alt="Hardware"
+                style="width: 100%"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered has-text-justified">
+          <div class="column content">
+            <p>
+              Hello World!
+            </p>
+          </div>
+        </div>
+      </div> -->
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3 highlight">HybridIL</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered has-text-justified">
+          <div class="column content">
+            <img
+                src="./static/images/pipeline.png"
+                alt="Pipeline"
+                style="width: 100%"
+              />
+
+            <p>
+              We first transfer the collected robot-free data to (pseudo-)robot data, migrating the domain gap.
+              The captured wrench is compensated to account for self-gravity effects.
+              The pose recorded by SLAM camera is transformed as the robot TCP pose.
+              And RGB-D observation images are backprojected into point cloud and filtered out unrelated points.
+              Leveraging this data, a diffusion-based policy is learned,
+              with both pose and wrench trajectory predicted,
+              conditioned on the encoded point cloud features, history pose and diffusion timestep embeddings.
+              According to the predicted force value,
+              either IK joint position primitive or hybrid force-position primitive is selected,
+              and fits the output force-position parameters to conduct execution actions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <div class="column content has-text-justified">
+              <ul>
+                <li><b>Active on consecutive force threshold exceedance</b></li>
+                <ul>
+                  <li>Determine motion direction</li>
+                  <li>Orthogonalize forces</li>
+                  <li>Press opposite initially</li>
+                </ul>
+              </ul>
+              <br />
+
+              <p>
+                Realize by Flexiv RDK of hybrid force-position control primitive.
+              </p>
+            </div>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="content">
+              <img
+                src="./static/images/controller.png"
+                alt="Controller"
+                style="width: 100%"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Collection Efficiency</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered has-text-justified">
+          <div class="column content">
+            <p>
+              Setting.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered has-text-justified">
+          <div class="column content">
+            <img
+              src=""
+              alt="ForceCapture"
+              style="width: 100%"
+            />
+            <br />
+            <p align="center">Hello World!</p>
+          </div>
+
+          <div class="column content">
+            <img
+              src=""
+              alt="Quantitative Results"
+              style="width: 100%"
+            />
+            <br />
+            <p align="center">Hello World!</p>
+          </div>
+
+          <div class="column content">
+            <img
+              src=""
+              alt="Teleoperation"
+              style="width: 100%"
+            />
+            <br />
+            <p align="center">Hello World!</p>
+          </div>
+        </div>
+
+        <p>
+          Analysis.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Manipulation Performance</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered has-text-justified">
+          <div class="column content">
+            <p>
+              Setting.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered has-text-justified">
+          <div class="column content">
+            <img
+              src=""
+              alt="Raw DP"
+              style="width: 100%"
+            />
+            <br />
+            <p align="center">Hello World!</p>
+          </div>
+
+          <div class="column content">
+            <img
+              src=""
+              alt="HybridIL"
+              style="width: 100%"
+            />
+            <br />
+            <p align="center">Hello World!</p>
+          </div>
+        </div>
+
+        <p>
+          Analysis.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="columns is-centered has-text-centered">
+          <h2 class="title">BibTeX</h2>
+        </div>
+        <p>If you find it helpful, please consider citing our work: </p>
+        <pre><code>
+</code></pre>
+      <!-- <p>
+        If you have further questions, please feel free to drop an email to
+        <a href="mailto:sjtu-wenhai@sjtu.edu.cn">sjtu-wenhai@sjtu.edu.cn</a>,
+        <a href="mailto:sjtuwjb3589635689@sjtu.edu.cn">sjtuwjb3589635689@sjtu.edu.cn</a>,
+        <a href="mailto:sommerfeld@sjtu.edu.cn">sommerfeld@sjtu.edu.cn</a>.
+      </p> -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This website is licensed under a
+                <a
+                  rel="license"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/"
+                  >Creative Commons Attribution-ShareAlike 4.0 International
+                  License</a
+                >. This page is modified upon
+                <a href="https://nerfies.github.io/">Nerfies</a> website (<a
+                  href="https://github.com/nerfies/nerfies.github.io"
+                  >source</a
+                >).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
