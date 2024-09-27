@@ -140,7 +140,7 @@
                   </span>
                   <span class="link-block">
                     <a
-                      href=""
+                      href="https://youtu.be/jrUJ2Ne2vhY"
                       class="external-link button is-normal is-rounded is-orange"
                     >
                       <span class="icon">
@@ -221,7 +221,7 @@
             <h2 class="title is-3">Video</h2>
             <div class="publication-video">
               <iframe
-                src=""
+                src="https://www.youtube.com/embed/jrUJ2Ne2vhY?si=vrPJVgsGBheA6c9p?rel=0&amp;showinfo=0"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -237,7 +237,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3 highlight">ForceCapture</h2>
+            <h2 class="title is-3 highlight" id="ForceCapture">ForceCapture</h2>
           </div>
         </div>
       </div>
@@ -284,6 +284,23 @@
                 A ratchet is inserted to isolate human hand forces by unidirectional locking if closed,
                 and least-squares estimation of the effector's center of mass and weight is used to compensate for the self-gravity before collecting data.
               </p>
+
+              <div class="content has-text-centered">
+                <video controls autoplay muted loop style="width: 49%">
+                  <source
+                    src="./static/videos/collection_clip_compressed.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+                <video controls autoplay muted loop style="width: 49%">
+                  <source
+                    src="./static/videos/sim_collection_zero_clip_compressed.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             </div>
           </div>
 
@@ -294,6 +311,16 @@
                 alt="Hardware"
                 style="width: 100%"
               />
+            </div>
+
+            <div class="content">
+              <video controls autoplay muted loop style="width: 75%">
+                <source
+                  src="./static/videos/show_device_clip_compressed.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>
@@ -314,7 +341,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3 highlight">HybridIL</h2>
+            <h2 class="title is-3 highlight" id="HybridIL">HybridIL</h2>
           </div>
         </div>
       </div>
@@ -359,7 +386,7 @@
               <br />
 
               <p>
-                Realize by Flexiv RDK of hybrid force-position control primitive.
+                Realized by Flexiv RDK of hybrid force-position control primitive.
               </p>
             </div>
           </div>
@@ -381,7 +408,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3">Collection Efficiency</h2>
+            <h2 class="title is-3">Data Collection Efficiency</h2>
           </div>
         </div>
       </div>
@@ -390,7 +417,11 @@
         <div class="columns is-centered has-text-centered has-text-justified">
           <div class="column content">
             <p>
-              Setting.
+              We conduct a case study of data collection by peeling a zucchini using a single-arm.
+              The procedure involved picking up the peeler, peeling the zucchini on a stand, placing the peeler down,
+              then grasping the zucchini to adjust its orientation for peeling until the entire vegetable was peeled.
+              We use the gripper version of <a href="#ForceCapture">ForceCapture</a>,
+              and the teleoperation setup follows the configuration in <a href="https://rh20t.github.io/">RH20T</a>.
             </p>
           </div>
         </div>
@@ -398,39 +429,44 @@
 
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered has-text-justified">
-          <div class="column content">
-            <img
-              src=""
-              alt="ForceCapture"
-              style="width: 100%"
-            />
+          <div class="column content has-text-centered">
+            <video controls autoplay muted loop style="width: 50%">
+              <source
+                src="./static/videos/collection2_clip_compressed.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
             <br />
-            <p align="center">Hello World!</p>
+            <p align="center">Demo clip by ForceCapture</p>
           </div>
 
           <div class="column content">
             <img
-              src=""
+              src="./static/images/efficiency_result.png"
               alt="Quantitative Results"
               style="width: 100%"
             />
             <br />
-            <p align="center">Hello World!</p>
+            <p align="center">Efficiency comparison</p>
           </div>
 
-          <div class="column content">
-            <img
-              src=""
-              alt="Teleoperation"
-              style="width: 100%"
-            />
+          <div class="column content has-text-centered">
+            <video controls autoplay muted loop style="width: 50%">
+              <source
+                src="./static/videos/teleoperation_clip_compressed.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
             <br />
-            <p align="center">Hello World!</p>
+            <p align="center">Demo clip by Teleoperation</p>
           </div>
         </div>
 
         <p>
-          Analysis.
+          Not only the collection time of ForceCapture is very close to humans,
+          but also it takes nearly no additional training time and nearly no operational errors.
         </p>
       </div>
     </section>
@@ -439,7 +475,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3">Manipulation Performance</h2>
+            <h2 class="title is-3">Robotic Peeling Experiments</h2>
           </div>
         </div>
       </div>
@@ -448,7 +484,11 @@
         <div class="columns is-centered has-text-centered has-text-justified">
           <div class="column content">
             <p>
-              Setting.
+              We use the fixed-tool version of ForceCapture to collect data,
+              with total 15 zucchinis, collecting 438 peeling skill segments,
+              resulting in a total of 30,199 action sequences.
+              Leveraging the collected data, 
+              we train the HybridIL model and the baseline methods, all by 500 epochs.
             </p>
           </div>
         </div>
@@ -457,33 +497,199 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered has-text-justified">
           <div class="column content">
+            <video controls autoplay muted loop style="width: 100%">
+              <source
+                src="./static/videos/dataset_replay_compressed.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+            <br />
+            <p align="center">Dataset replay by ForceCapture</p>
+          </div>
+
+          <div class="column content">
+            <video controls autoplay muted loop style="width: 100%">
+              <source
+                src="./static/videos/dataset_aug_replay_compressed.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+            <br />
+            <p align="center">Pose-augmented dataset replay by ForceCapture</p>
+          </div>
+
+          <div class="column content">
+            <video controls autoplay muted loop style="width: 100%">
+              <source
+                src="./static/videos/dataset_test_compressed.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+            <br />
+            <p align="center">Rollout on validation dataset by HybridIL</p>
+          </div>
+
+          <div class="column content">
+            <video controls autoplay muted loop style="width: 100%">
+              <source
+                src="./static/videos/hybridil_seq_compressed.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+            <br />
+            <p align="center">Rollout on real robot by HybridIL</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered has-text-justified">
+          <div class="column content">
+            <p>
+              Raw DP and HybridIL were tested for 20 peeling actions,
+              while Force DP and Force+Hybrid DP were tested for 10 peeling actions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered has-text-justified">
+          <div class="column content">
+            <table class="table is-striped is-fullwidth">
+              <thead>
+                <tr>
+                  <th rowspan="2">Method</th>
+                  <th colspan="2">Success rate (%)</th>
+                </tr>
+                <tr>
+                  <td>motion correct</td>
+                  <td>peel length > 10cm</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Raw DP</td>
+                  <td>80</td>
+                  <td>55</td>
+                </tr>
+                <tr>
+                  <td>Force DP</td>
+                  <td>60</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td>Force+Hybrid DP</td>
+                  <td>80</td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td><b>HybridIL (proposed)</b></td>
+                  <td><b>100</b></td>
+                  <td><b>85</b></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered has-text-justified">
+          <div class="column content">
             <img
-              src=""
+              src="./static/images/rawdp_skin_result.png"
               alt="Raw DP"
               style="width: 100%"
             />
             <br />
-            <p align="center">Hello World!</p>
+            <p align="center">Peeled skins by Raw DP</p>
           </div>
 
           <div class="column content">
             <img
-              src=""
+              src="./static/images/ablation_skin_result.png"
+              alt="Ablation"
+              style="width: 100%"
+            />
+            <br />
+            <p align="center">Peeled skins by Force DP (left) and Force+Hybrid DP (right)</p>
+          </div>
+
+          <div class="column content">
+            <img
+              src="./static/images/hybridil_skin_result.png"
               alt="HybridIL"
               style="width: 100%"
             />
             <br />
-            <p align="center">Hello World!</p>
+            <p align="center">Peeled skins by HybridIL</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered has-text-justified">
+          <div class="column content">
+            <video controls autoplay muted loop style="width: 100%">
+              <source
+                src="./static/videos/cut_experiments_compressed.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+            <br />
+            <p align="center">Rollouts on real robot by Raw DP and HybridIL</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered has-text-justified">
+          <div class="column content">
+            <img
+              src="./static/images/gt_f_curve.png"
+              alt="GT Force Curve"
+              style="width: 100%"
+            />
+            <br />
+            <p align="center">Force curve during data collection</p>
+          </div>
+
+          <div class="column content">
+            <img
+              src="./static/images/position_f_curve.png"
+              alt="Position Force Curve"
+              style="width: 100%"
+            />
+            <br />
+            <p align="center">Force curve during rollout of Raw DP</p>
+          </div>
+
+          <div class="column content">
+            <img
+              src="./static/images/hybrid_f_curve.png"
+              alt="Hybrid Force Curve"
+              style="width: 100%"
+            />
+            <br />
+            <p align="center">Force curve during rollout of HybridIL</p>
           </div>
         </div>
 
         <p>
-          Analysis.
+          Not only the success rates of HybridIL are higher than the baselines,
+          but also the peeled skins of HybridIL are longer and smoother,
+          and the interaction forces during execution are more similar to the collected data by human operators.
         </p>
       </div>
     </section>
 
-    <section class="section" id="BibTeX">
+    <!-- <section class="section" id="BibTeX">
       <div class="container is-max-desktop content">
         <div class="columns is-centered has-text-centered">
           <h2 class="title">BibTeX</h2>
@@ -491,14 +697,14 @@
         <p>If you find it helpful, please consider citing our work: </p>
         <pre><code>
 </code></pre>
-      <!-- <p>
+      <p>
         If you have further questions, please feel free to drop an email to
         <a href="mailto:sjtu-wenhai@sjtu.edu.cn">sjtu-wenhai@sjtu.edu.cn</a>,
         <a href="mailto:sjtuwjb3589635689@sjtu.edu.cn">sjtuwjb3589635689@sjtu.edu.cn</a>,
         <a href="mailto:sommerfeld@sjtu.edu.cn">sommerfeld@sjtu.edu.cn</a>.
-      </p> -->
+      </p>
       </div>
-    </section>
+    </section> -->
 
     <footer class="footer">
       <div class="container">
