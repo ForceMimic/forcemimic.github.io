@@ -376,10 +376,11 @@
           <div class="column has-text-centered">
             <div class="column content has-text-justified">
               <ul>
-                <li><b>Active on consecutive force threshold exceedance</b></li>
+                <li><b>Using orthogonal hybrid force-postion controller to fit predicted wrench-position</b></li>
                 <ul>
+                  <li>Active on consecutive force threshold exceedance</li>
                   <li>Determine motion direction</li>
-                  <li>Orthogonalize forces</li>
+                  <li>Orthogonalize force-postion</li>
                   <li>Press opposite initially</li>
                 </ul>
               </ul>
@@ -549,7 +550,11 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered has-text-justified">
           <div class="column content">
+            <li><b>Raw DP</b> used raw visual perception and robot pose as inputs, outputting the end- effector pose sequence based on diffusion policy.</li>
+            <li><b>Force DP</b> incorporated visual perception, robot pose, and robot force sensing as inputs, also outputting the end-effector pose sequence.</li>
+            <li><b>Force+Hybrid DP</b> used visual perception, robot pose, and robot force sensing as inputs, but output both pose and wrench sequences</li>
             <p>
+              For baselines that output wrench-position parameters, hybrid force-position control primitives were employed to match and switch between control modes.
               Raw DP and HybridIL were tested for 20 peeling actions,
               while Force DP and Force+Hybrid DP were tested for 10 peeling actions.
             </p>
